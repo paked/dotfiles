@@ -3,7 +3,7 @@ import os
 import shutil
 import stat
 
-programs = {'i3': ['.i3'], 'vim': ['.vimrc', '.vim']}
+programs = {'i3': ['.i3'], 'vim': ['.vimrc', '.vim'], 'zsh': ['.zprofile', '.zshrc']}
 
 DESTINATION = os.environ["HOME"]
 
@@ -15,10 +15,14 @@ def install(name):
     for config in program:
         start_path = os.path.abspath(config)
         end_path = DESTINATION + config
-
-        _copy(start_path, end_path, ".old")
+        if os.path.exists(end_path):
+            _move(end_path, end_path, extra=".old")
         _copy(start_path, end_path)
 
+def _move(start, end, extra=""):
+    start_path = start
+    end_path = end + extra
+    shutil.move(start_path, end_path)
 
 def _copy(start, end, extra=""):
     start_path = start + extra
