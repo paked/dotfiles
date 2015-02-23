@@ -3,14 +3,15 @@ import os
 import shutil
 import stat
 
-programs = {'i3': ['.i3'], 'vim': ['.vimrc', '.vim'], 'zsh': ['.zprofile', '.zshrc']}
-
+PROGRAMS = {'i3': ['.i3'], 'vim': ['.vimrc', '.vim'], 'zsh': ['.zprofile', '.zshrc']}
+YES_ANSWERS = ['yes', 'YES', 'y', 'Y']
 DESTINATION = os.environ["HOME"]
 
 def install(name):
-    if not name in programs:
+    if not name in PROGRAMS:
         return
-    program = programs[name]
+    print("Installing: ", name)
+    program = PROGRAMS[name]
     
     for config in program:
         start_path = os.path.abspath(config)
@@ -46,14 +47,21 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     if not args.permanent:
-        DESTINATION = os.path.abspath('test') + '/'
-        print(DESTINATION)
+        print("Files being installed in a test directory.")
+        DESTINATION = os.path.abspath('test')
+    else: 
+        answer = input("Location of files to be installed {}/, continue?: ".format(DESTINATION))
+        if answer not in YES_ANSWERS:
+            print("Terminated configuration.")
+            exit
+
+    DESTINATION += "/"
 
     if len(args.update) == 0:
-        for program in programs:
+        for program in PROGRAMS:
             install(program)
     else:
         for program in args.update:
             install(program)
-        
-    print(args)
+
+    print("dotfiles installed.")
