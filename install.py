@@ -5,7 +5,7 @@ import stat
 
 programs = {'i3': ['.i3'], 'vim': ['.vimrc', '.vim']}
 
-DESTINATION = os.environ["HOME"] + "/dotfilestest/"
+DESTINATION = os.environ["HOME"]
 
 def install(name):
     if not name in programs:
@@ -16,10 +16,18 @@ def install(name):
         start_path = os.path.abspath(config)
         end_path = DESTINATION + config
 
-        if os.path.isdir(start_path):
-            shutil.copytree(start_path, end_path)    
-        else:
-            shutil.copy(start_path, end_path)
+        _copy(start_path, end_path, ".old")
+        _copy(start_path, end_path)
+
+
+def _copy(start, end, extra=""):
+    start_path = start + extra
+    end_path = end + extra
+
+    if os.path.isdir(start_path):
+        shutil.copytree(start_path, end_path)    
+    else:
+        shutil.copy(start_path, end_path)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -28,13 +36,20 @@ if __name__ == "__main__":
                         nargs='*',
                         help='What you want to install, blank for all',
                         required=True)
+    parser.add_argument('-p',
+                        '--permanent',
+                        help='Whether to permanently make the changes to your $HOME dir')
     args = parser.parse_args()
-    if args.update:
-        if len(args.update) == 0:
-            for program in programs:
-                install(program)
-        else:
-            for program in args.update:
-                install(program)
+    
+    if not args.permanent:
+        DESTINATION = os.path.abspath('test') + '/'
+        print(DESTINATION)
+
+    if len(args.update) == 0:
+        for program in programs:
+            install(program)
+    else:
+        for program in args.update:
+            install(program)
         
-    print(parser.parse_args().update)
+    print(args)
