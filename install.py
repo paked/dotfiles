@@ -3,7 +3,7 @@ import os
 import shutil
 import stat
 
-PROGRAMS = {'i3': ['.i3'], 'vim': ['.vimrc', '.vim'], 'zsh': ['.zprofile', '.zshrc']}
+PROGRAMS = {'i3': ['.i3'], 'vim': ['.vimrc', '.vim'], 'zsh': ['.zprofile', '.zshrc', '.oh-my-zsh']}
 YES_ANSWERS = ['yes', 'YES', 'y', 'Y']
 DESTINATION = os.environ["HOME"]
 
@@ -18,7 +18,7 @@ def install(name):
         end_path = DESTINATION + config
         if os.path.exists(end_path):
             _move(end_path, end_path, extra=".old")
-        _copy(start_path, end_path)
+            _copy(start_path, end_path)
 
 def _move(start, end, extra=""):
     start_path = start
@@ -50,10 +50,10 @@ if __name__ == "__main__":
         print("Files being installed in a test directory.")
         DESTINATION = os.path.abspath('test')
     else: 
-        answer = input("Location of files to be installed {}/, continue?: ".format(DESTINATION))
-        if answer not in YES_ANSWERS:
-            print("Terminated configuration.")
-            exit
+       answer = input("Location of files to be installed {}, continue?: ".format(DESTINATION))
+       if answer not in YES_ANSWERS:
+          print("Terminated configuration.")
+          exit
 
     DESTINATION += "/"
 
