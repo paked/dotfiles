@@ -3,7 +3,7 @@ import os
 import shutil
 import stat
 
-PROGRAMS = {'i3': ['.i3'], 'vim': ['.vimrc', '.vim'], 'zsh': ['.zprofile', '.zshrc', '.oh-my-zsh']}
+PROGRAMS = {'i3': ['.i3'], 'vim': ['.vimrc', '.vim'], 'zsh': ['.zprofile', '.zshrc', '.oh-my-zsh'], 'tmux': ['.tmux.conf']}
 YES_ANSWERS = ['yes', 'YES', 'y', 'Y']
 DESTINATION = os.environ["HOME"]
 
