@@ -1,10 +1,9 @@
-set t_Co=256
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
 colorscheme delek
 
-au FileType javascript call JavaScriptFold()
+let jshint2_save = 1
 
-set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4 number
+set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4 number background=dark
