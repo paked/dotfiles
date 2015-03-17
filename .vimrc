@@ -1,8 +1,11 @@
+set term=screen-256color
+set t_Co=256
+
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-colorscheme delek
+colorscheme Benokai
 
 let jshint2_save = 1
 
