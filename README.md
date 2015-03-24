@@ -9,4 +9,11 @@ Included are:
 * tmux
 
 ## Installation
-The install.py script is used for installation. Two options are available: permanent mode (-p), and a list of the wanted programs (-u). Permanent mode needs to be set to anything (it doesn't matter as long as it is set!) otherwise the script will install the desired programs into a testing directory (./test). The `-u` flag is for setting which programs you want to install, specifying none will install them all.
+Installation is performed with `install.py`, which provide two possible flags: permanent mode, and projects. Permanent mode should always be enabled (`-p=true`), unless the user is debugging and wishes to install into the `./test/` directory. Projects is a list of all programs configuration should be installed for (re: **note** the configuration files name, but the program it belongs to), leaving blank will install everything.
+
+### Examples
+`python3 install.py -p=true -u vim tmux`
+Install permanently (into the current users home directory), the configuration files for vim (.vimrc, .vim/) and tmux  (.tmux.conf)
+
+`python3 install.py -p=true -u`
+Install all of the available programs permanently (into the current users home directory).
