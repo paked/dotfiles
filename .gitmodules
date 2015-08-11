@@ -36,3 +36,6 @@
 [submodule ".vim/bundle/Benokai"]
 	path = .vim/bundle/Benokai
 	url = https://github.com/benjaminwhite/Benokai.git
+[submodule "quick-scope"]
+	path = quick-scope
+	url = https://github.com/unblevable/quick-scope.git
