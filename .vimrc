@@ -2,8 +2,9 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-colorscheme Benokai
- 
-let jshint2_save = 1
+set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 
-set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4 number background=dark noswapfile ts=4 et
+colorscheme Benokai
+
+set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4 number background=dark noswapfile ts=4 et ruler
+
