@@ -53,3 +53,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_html_tidy_ignore_errors = ['proprietary attribute "ng-', 'trimming empty']
 
+" JAVASCRIPT-LIBRARIES
+let g:used_javascript_libs = 'angularjs,jquery'
+
