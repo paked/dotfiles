@@ -51,3 +51,6 @@
 [submodule ".vim/bundle/gundo.vim"]
 	path = .vim/bundle/gundo.vim
 	url = http://github.com/sjl/gundo.vim.git
+[submodule ".vim/bundle/syntastic.vim"]
+	path = .vim/bundle/syntastic.vim
+	url = https://github.com/scrooloose/syntastic
