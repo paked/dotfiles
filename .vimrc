@@ -43,3 +43,6 @@ nnoremap gV `[v`]
 set noswapfile
 let mapleader=","
 
+" GUNDO
+nnoremap <leader>u :GundoToggle<CR>
+
