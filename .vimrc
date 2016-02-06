@@ -55,8 +55,14 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_html_tidy_ignore_errors = ['proprietary attribute "ng-', 'trimming empty']
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go', 'typescript'] }
+let g:syntastic_javascript_checkers = ['eslint']
 
 " JAVASCRIPT-LIBRARIES
 let g:used_javascript_libs = 'angularjs,jquery'
 
+" FILE SPECIFIC SETTINGS
+autocmd Filetype html setlocal ts=4 sts=4 sw=4
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype typescript setlocal ts=2 sts=2 sw=2
+autocmd Filetype json setlocal ts=2 sts=2 sw=2

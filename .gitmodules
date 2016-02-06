@@ -57,3 +57,6 @@
 [submodule ".vim/bundle/javascript-libraries.vim"]
 	path = .vim/bundle/javascript-libraries.vim
 	url = https://github.com/othree/javascript-libraries-syntax.vim.git
+[submodule ".vim/bundle/typescript-vim"]
+	path = .vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
