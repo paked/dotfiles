@@ -1,7 +1,6 @@
 execute pathogen#infect()
 syntax on
 
-
 " SPACES & TABS
 set tabstop=4 " number of visual spaces a TAB represents
 set softtabstop=4 " number of visual spaces a TAB represents when editing
