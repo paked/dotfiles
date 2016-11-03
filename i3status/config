@@ -6,13 +6,13 @@
 # ß
 # If the above line is not correctly displayed, fix your editor first!
 
-# Modified by Harrison Shoebridge, 8/7/16
+# Modified by Harrison Shoebridge
 
 general {
-        colors = true
+    colors = true
 	color_good = "#00B6F2"
 	color_bad = "#F23C00"
-        interval = 5
+    interval = 5
 }
 
 order += "disk /"
@@ -23,21 +23,20 @@ order += "tztime time"
 
 wireless _first_ {
         format_up = "  %essid (%quality)"
-        format_down = "W: down"
+        format_down = "  down"
 }
 
 ethernet _first_ {
         format_up = "  %speed"
-        format_down = "E: down"
+        format_down = "  down"
 }
 
 tztime date {
-        format = "  %m-%d"
+        format = "  %d-%m"
 }
 
-
 tztime time {
-        format = " %H:%M"
+        format = "  %H:%M"
 }
 
 disk "/" {
