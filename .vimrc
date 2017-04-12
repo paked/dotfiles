@@ -54,14 +54,31 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_html_tidy_ignore_errors = ['proprietary attribute "ng-', 'trimming empty']
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go', 'typescript'] }
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go', 'typescript', 'html'] }
+let g:syntastic_javascript_checkers = ['']
 
 " JAVASCRIPT-LIBRARIES
 let g:used_javascript_libs = 'angularjs,jquery'
 
 " FILE SPECIFIC SETTINGS
+au BufRead,BufNewFile *.hx set filetype=haxe
+
 autocmd Filetype html setlocal ts=4 sts=4 sw=4
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype typescript setlocal ts=2 sts=2 sw=2
 autocmd Filetype json setlocal ts=2 sts=2 sw=2
+autocmd Filetype haxe setlocal ts=2 sts=2 sw=2
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype haml setlocal ts=2 sts=2 sw=2
+
+" DON'T BE ANAL ABOUT JSX FILE NAMES
+let g:jsx_pragma_required=0
+
+" TOGGLE NERD TREE
+map <C-n> :NERDTreeToggle<CR>
+
+" SANE VIM NAVIGATIONS MAPPINGS
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
