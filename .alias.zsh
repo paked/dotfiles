@@ -1,0 +1,7 @@
+alias dme='eval $(docker-machine env)'
+alias dcu='docker-compose run'
+alias dcus='docker-compose run --service-ports'
+alias lsa='ls -a'
+alias gs='git status'
+alias ga='git add -p'
+alias gc='git commit'
