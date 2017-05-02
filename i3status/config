@@ -22,7 +22,7 @@ order += "tztime date"
 order += "tztime time"
 
 wireless _first_ {
-        format_up = "  %essid (%quality)"
+        format_up = "  %essid (%quality )"
         format_down = "  down"
 }
 
