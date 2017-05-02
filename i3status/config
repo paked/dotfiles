@@ -17,7 +17,7 @@ general {
 
 order += "disk /"
 order += "wireless _first_"
-order += "ethernet _first_"
+order += "battery 0"
 order += "tztime date"
 order += "tztime time"
 
@@ -26,9 +26,18 @@ wireless _first_ {
         format_down = "  down"
 }
 
-ethernet _first_ {
-        format_up = "  %speed"
-        format_down = "  down"
+battery 0 {
+    status_chr = ""
+    status_bat = " "
+    status_unk = "?"
+    status_full = ""
+    format = "%status %percentage (%remaining)"
+    path = "/sys/class/power_supply/BAT%d/uevent"
+    low_threshold = "30"
+    threshold_type = "time"
+    last_full_capacity = true
+    integer_battery_capacity = true
+    hide_seconds = true
 }
 
 tztime date {
