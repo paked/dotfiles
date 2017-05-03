@@ -16,10 +16,6 @@ filetype plugin indent on " turn on plugin
 set wildmenu " handy little graphical menu for commands
 set lazyredraw " save me a few cpu cycles
 set showmatch " helps ADD
-if has('mouse') " Enable mouse if exists
-    set mouse=a
-endif
-
 
 " SEARCH
 set incsearch " search as characters are entered
