@@ -41,7 +41,7 @@ battery 0 {
 }
 
 tztime date {
-        format = "  %d-%m"
+        format = "  %Y-%m-%d"
 }
 
 tztime time {
