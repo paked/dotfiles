@@ -15,6 +15,14 @@ ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s $(pwd)/.alias.zsh ~/.alias.zsh
 ```
 
+My main device is currently a Razer Blade Stealth. My specific Xorg configuration is in the [razer_blade_stealth](razer_blade_stealth) folder.
+
+Too set that up use:
+
+```
+sudo mkdir -p /etc/X11/xorg.conf.d && sudo ln -s $(pwd)/razer_blade_stealth/* /etc/X11/xorg.conf.d/
+```
+
 Make sure to source `.alias.zsh` in `.zshrc`
 
 ## Other things to do
