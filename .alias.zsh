@@ -16,6 +16,7 @@ alias gs='git status'
 alias ga='git add -p'
 alias gc='git commit'
 alias gp='git push'
+alias gcp='gc && gp'
 alias gl='git log'
 alias gpu='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 
