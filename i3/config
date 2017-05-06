@@ -183,7 +183,7 @@ bar {
 		urgent_workspace   #2f343a #900000 #ffffff
 	}
 
-        status_command i3status
+    status_command i3blocks
 }
 
 exec --no-startup-id xsetroot -solid "#1F1F1F"
