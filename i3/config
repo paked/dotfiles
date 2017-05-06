@@ -126,7 +126,7 @@ bindsym XF86AudioLowerVolume exec "amixer set Master -q 5%-"
 bindsym XF86AudioPlay exec "playerctl play-pause"
 bindsym XF86AudioPause exec "playerctl play-pause"
 bindsym XF86AudioNext exec "playerctl next"
-bindsym XF86AudioPrev exec "playerctrl prev"
+bindsym XF86AudioPrev exec "playerctl previous"
 
 bindsym --release Print exec "scrot -s ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png"
 bindsym --release Shift+Print exec "scrot ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png"

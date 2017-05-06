@@ -10,12 +10,15 @@ alias ng='ngrok http -subdomain=harrison'
 
 # GNU/Utils
 alias lsa='ls -a'
+alias c='clear'
 
 # Git
 alias gs='git status'
 alias ga='git add -p'
 alias gc='git commit'
+alias gca='git commit --amend'
 alias gp='git push'
+alias gpf='git push -f'
 alias gcp='gc && gp'
 alias gl='git log'
 alias gpu='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
