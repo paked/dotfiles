@@ -13,11 +13,13 @@ ln -s $(pwd)/.vim ~/.vim
 ln -s $(pwd)/.vimrc ~/.vimrc
 ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s $(pwd)/.alias.zsh ~/.alias.zsh
+ln -s $(pwd)/.blocks ~/.blocks
+ln -s $(pwd)/.config/* ~/.config/
 ```
 
 My main device is currently a Razer Blade Stealth. My specific Xorg configuration is in the [razer_blade_stealth](razer_blade_stealth) folder.
 
-Too set that up use:
+To set that up use:
 
 ```
 sudo mkdir -p /etc/X11/xorg.conf.d && sudo ln -s $(pwd)/razer_blade_stealth/* /etc/X11/xorg.conf.d/
