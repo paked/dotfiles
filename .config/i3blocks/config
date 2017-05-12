@@ -42,11 +42,11 @@ interval=30
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
-# [volume]
-# label=♪
-# instance=Master
-# interval=once
-# signal=10
+[volume]
+label=♪
+instance=Master
+interval=1
+signal=10
 
 [network]
 instance=wlp1s0
@@ -58,13 +58,11 @@ instance=battery_BAT0
 command=$HOME/.blocks/battery.rb
 interval=30
 
-# Date
 [date]
 label= 
 command=date '+%Y-%m-%d'
 interval=10
 
-# Time
 [time]
 label= 
 command=date '+%H:%M'
