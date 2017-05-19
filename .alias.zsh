@@ -6,17 +6,23 @@ alias dme='eval $(docker-machine env)'
 alias dcu='docker-compose run'
 alias dcus='docker-compose run --service-ports'
 
+# Ngrok
 alias ng='ngrok http -subdomain=harrison'
+
+# Tmux
+alias tns='tmux new-session -s'
 
 # GNU/Utils
 alias lsa='ls -a'
 alias c='clear'
+alias pn='ping google.com'
 
 # Git
 alias gs='git status'
 alias ga='git add -p'
 alias gc='git commit'
 alias gca='git commit --amend'
+alias gd='git diff'
 alias gp='git push'
 alias gpf='git push -f'
 alias gcp='gc && gp'
@@ -32,3 +38,6 @@ alias hcw='hc && cd website'
 alias dfs='code && cd dotfiles'
 
 alias hcsd='hc && tmux new-session -s hc'
+
+# Ubuntu
+alias net='nmtui-connect'
