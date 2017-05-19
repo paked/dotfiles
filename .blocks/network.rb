@@ -45,5 +45,5 @@ when state?(device, STATUS_CONNECTING)
 when state?(device, STATUS_DISCONNECTED)
   puts Color.bad("#{ICON_STATUS_DISCONNECTED} Down.")
 else
-  puts Color.bad("IDK")
+  puts Color.bad("IDK || #{/#{device}:(.*)\n/.match(network_status)[1]}")
 end
