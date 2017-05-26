@@ -11,11 +11,12 @@ alias ng='ngrok http -subdomain=harrison'
 
 # Tmux
 alias tns='tmux new-session -s'
+alias tls='tmux ls'
 
 # GNU/Utils
 alias lsa='ls -a'
 alias c='clear'
-alias pn='ping google.com'
+alias pn='ping -c 10 google.com'
 
 # Git
 alias gs='git status'
