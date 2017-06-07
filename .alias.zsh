@@ -17,9 +17,11 @@ alias tls='tmux ls'
 alias lsa='ls -a'
 alias c='clear'
 alias pn='ping -c 10 google.com'
+alias timestamp='date --rfc-3339="date"'
 
 # Git
 alias gs='git status'
+alias gan='git add'
 alias ga='git add -p'
 alias gc='git commit'
 alias gca='git commit --amend'
