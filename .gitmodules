@@ -71,3 +71,9 @@
 [submodule ".vim/bundle/vim-tmux-navigator.vim"]
 	path = .vim/bundle/vim-tmux-navigator.vim
 	url = git@github.com:christoomey/vim-tmux-navigator.git
+[submodule ".vim/bundle/goyo.vim.git"]
+	path = .vim/bundle/goyo.vim.git
+	url = https://github.com/junegunn/goyo.vim.git
+[submodule ".vim/bundle/limelight.vim.git"]
+	path = .vim/bundle/limelight.vim.git
+	url = https://github.com/junegunn/limelight.vim.git

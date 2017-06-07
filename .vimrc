@@ -78,3 +78,20 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+" Writing mode for Markdown
+function SetWritingMode()
+  " disable line wrapping & color column
+  set textwidth=0
+  set colorcolumn=0
+
+  " wrap at words, not at characters
+  set linebreak
+
+  " turn on Goyo
+  Goyo
+
+  set autochdir
+  " quit the buffer when we quit Goyo (so when the user presses :q or :wq)
+  autocmd! User GoyoLeave nested quit
+endfunction

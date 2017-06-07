@@ -40,7 +40,7 @@ alias hcf='hc && cd frontend'
 alias hcw='hc && cd website'
 alias dfs='code && cd dotfiles'
 
-alias hcsd='hc && tmux new-session -s hc'
-
 # Ubuntu
 alias net='nmtui-connect'
+
+source ~/ascii/alias.zsh
