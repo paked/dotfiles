@@ -48,4 +48,5 @@ alias dfs='code && cd dotfiles'
 # Ubuntu
 alias net='nmtui-connect'
 
+# (Sorry, this is private :D)
 source ~/ascii/alias.zsh

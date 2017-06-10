@@ -66,6 +66,7 @@ autocmd Filetype json setlocal ts=2 sts=2 sw=2
 autocmd Filetype haxe setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype haml setlocal ts=2 sts=2 sw=2
+autocmd Filetype markdown setlocal ts=2 sts=2 sw=2
 
 " DON'T BE ANAL ABOUT JSX FILE NAMES
 let g:jsx_pragma_required=0
@@ -84,6 +85,7 @@ function SetWritingMode()
   " disable line wrapping & color column
   set textwidth=0
   set colorcolumn=0
+  nnoremap <Esc> :wq<Enter>
 
   " wrap at words, not at characters
   set linebreak
