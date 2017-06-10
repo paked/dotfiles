@@ -32,6 +32,10 @@ alias gpf='git push -f'
 alias gcp='gc && gp'
 alias gl='git log'
 alias gpu='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
+alias gcb='git checkout -b'
+alias gco='git checkout'
+alias gcom='git checkout master'
+alias grh='git reset HEAD'
 
 # Navigation
 alias code='cd ~/code'
