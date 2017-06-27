@@ -1,5 +1,6 @@
 # Alias shortcuts
 alias ae="$EDITOR ~/.alias.zsh && source ~/.alias.zsh"
+alias are="source ~/.alias.zsh"
 
 # Docker
 alias dme='eval $(docker-machine env)'
@@ -10,6 +11,7 @@ alias dcus='docker-compose run --service-ports'
 alias ng='ngrok http -subdomain=harrison'
 
 # Tmux
+alias ta='tmux a'
 alias tns='tmux new-session -s'
 alias tls='tmux ls'
 
@@ -36,6 +38,7 @@ alias gcb='git checkout -b'
 alias gco='git checkout'
 alias gcom='git checkout master'
 alias grh='git reset HEAD'
+alias gra='git remote add'
 
 # Navigation
 alias code='cd ~/code'
@@ -43,6 +46,7 @@ alias hc='code && cd hackclub'
 alias hca='hc && cd api'
 alias hcf='hc && cd frontend'
 alias hcw='hc && cd website'
+alias hcm='hc && cd monolith'
 alias dfs='code && cd dotfiles'
 
 # Ubuntu
