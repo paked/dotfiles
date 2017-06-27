@@ -67,6 +67,7 @@ autocmd Filetype haxe setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype haml setlocal ts=2 sts=2 sw=2
 autocmd Filetype markdown setlocal ts=2 sts=2 sw=2
+autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
 
 " DON'T BE ANAL ABOUT JSX FILE NAMES
 let g:jsx_pragma_required=0
