@@ -56,6 +56,10 @@ let g:syntastic_javascript_checkers = ['']
 " JAVASCRIPT-LIBRARIES
 let g:used_javascript_libs = 'angularjs,jquery'
 
+" CTRLP
+
+let g:ctrlp_custom_ignore = 'node_modules'
+
 " FILE SPECIFIC SETTINGS
 au BufRead,BufNewFile *.hx set filetype=haxe
 
