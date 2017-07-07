@@ -13,7 +13,7 @@ alias ng='ngrok http -subdomain=harrison'
 # Tmux
 alias ta='tmux a'
 alias tns='tmux new-session -s'
-alias tls='tmux ls'
+alias tl='tmux ls'
 
 # GNU/Utils
 alias lsa='ls -a'
@@ -30,6 +30,7 @@ alias gca='git commit --amend'
 alias gd='git diff'
 alias gds='git diff --staged'
 alias gp='git push'
+alias gpl='git pull'
 alias gpf='git push -f'
 alias gcp='gc && gp'
 alias gl='git log'
@@ -39,18 +40,22 @@ alias gco='git checkout'
 alias gcom='git checkout master'
 alias grh='git reset HEAD'
 alias gra='git remote add'
+alias gb='git branch'
 
 # Navigation
 alias code='cd ~/code'
-alias hc='code && cd hackclub'
-alias hca='hc && cd api'
-alias hcf='hc && cd frontend'
+alias hc='cd ~/code/hackclub'
+alias hca='cd ~/code/hackclub/monolith/api'
+alias hcf='cd ~/code/hackclub/monolith/frontend'
 alias hcw='hc && cd website'
-alias hcm='hc && cd monolith'
+alias hcm='cd ~/code/hackclub/monolith'
 alias dfs='code && cd dotfiles'
 
 # Ubuntu
 alias net='nmtui-connect'
+
+# Servers
+alias sschmidt='ssh schmidt.harrison.tech'
 
 # (Sorry, this is private :D)
 source ~/ascii/alias.zsh
