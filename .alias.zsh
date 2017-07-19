@@ -65,5 +65,5 @@ source ~/ascii/alias.zsh
 # Configure monitors
 export XRESOURCES_DEFAULT=~/.Xresources
 export XRESOURCES_WORK=~/.Xresources.work
-alias xwork="xrdb -merge $XRESOURCES_WORK"
-alias xdefault="xrdb -merge $XRESOURCES_DEFAULT"
+alias xwork="xrdb -merge $XRESOURCES_WORK && ~/.screen_layouts/work.sh"
+alias xdefault="xrdb -merge $XRESOURCES_DEFAULT && ~/.screen_layouts/default.sh"
