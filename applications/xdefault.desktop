@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=XDefault
+Exec=xdefault
+Terminal=false
+Type=Application

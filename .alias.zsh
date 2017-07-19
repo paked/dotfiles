@@ -13,7 +13,7 @@ alias ng='ngrok http -subdomain=harrison'
 # Tmux
 alias ta='tmux a'
 alias tns='tmux new-session -s'
-alias tl='tmux ls'
+alias tls='tmux ls'
 
 # GNU/Utils
 alias lsa='ls -al'
@@ -34,6 +34,7 @@ alias gpl='git pull'
 alias gplom='git pull origin master'
 alias gpf='git push -f'
 alias gcp='gc && gp'
+alias gcpu='gc && gpu'
 alias gl='git log'
 alias gpu='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 alias gcob='git checkout -b'
@@ -60,3 +61,9 @@ alias sschmidt='ssh schmidt.harrison.tech'
 
 # (Sorry, this is private :D)
 source ~/ascii/alias.zsh
+
+# Configure monitors
+export XRESOURCES_DEFAULT=~/.Xresources
+export XRESOURCES_WORK=~/.Xresources.work
+alias xwork="xrdb -merge $XRESOURCES_WORK"
+alias xdefault="xrdb -merge $XRESOURCES_DEFAULT"
