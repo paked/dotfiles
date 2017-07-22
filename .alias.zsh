@@ -83,3 +83,8 @@ export XRESOURCES_DEFAULT=~/.Xresources
 export XRESOURCES_WORK=~/.Xresources.work
 alias xwork="xrdb -merge $XRESOURCES_WORK && ~/.screen_layouts/work.sh"
 alias xdefault="xrdb -merge $XRESOURCES_DEFAULT && ~/.screen_layouts/default.sh"
+
+if [ -f /ascii/alias.zsh ]; then
+    # (Sorry, this is private :D)
+    source ~/ascii/alias.zsh
+fi
