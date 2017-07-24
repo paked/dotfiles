@@ -74,6 +74,7 @@ alias net='nmtui-connect'
 
 # Servers
 alias sschmidt='ssh schmidt.harrison.tech'
+alias vps='sschmidt'
 
 # (Sorry, this is private :D)
 source ~/ascii/alias.zsh
