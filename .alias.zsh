@@ -76,6 +76,10 @@ alias net='nmtui-connect'
 alias sschmidt='ssh schmidt.harrison.tech'
 alias vps='sschmidt'
 
+# Clipboard
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
 # (Sorry, this is private :D)
 source ~/ascii/alias.zsh
 
