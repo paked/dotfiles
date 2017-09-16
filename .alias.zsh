@@ -4,8 +4,8 @@ alias are="source ~/.alias.zsh"
 
 # Docker
 alias dme='eval $(docker-machine env)'
-alias dcu='docker-compose run'
-alias dcus='docker-compose run --service-ports'
+alias dcr='docker-compose run'
+alias dcrs='docker-compose run --service-ports'
 
 # Ngrok
 alias ng='ngrok http -subdomain=harrison'
@@ -38,6 +38,7 @@ alias pn='ping -c 10 google.com'
 alias timestamp='date --rfc-3339="date"'
 
 # Git
+alias g='git status'
 alias gs='git status'
 alias gan='git add'
 alias ga='git add -p'
@@ -62,6 +63,7 @@ alias gb='git branch'
 
 # Navigation
 alias code='cd ~/code'
+alias ascii='cd ~/ascii'
 alias hc='cd ~/code/hackclub'
 alias hca='cd ~/code/hackclub/monolith/api'
 alias hcf='cd ~/code/hackclub/monolith/frontend'
@@ -92,4 +94,8 @@ alias xdefault="xrdb -merge $XRESOURCES_DEFAULT && ~/.screen_layouts/default.sh"
 if [ -f /ascii/alias.zsh ]; then
     # (Sorry, this is private :D)
     source ~/ascii/alias.zsh
+    alias streams="cd ~/ascii/streams"
 fi
+
+alias hrm='heroku run rails c --app api-hackclub'
+alias api-hackclub='heroku run --app api-hackclub'

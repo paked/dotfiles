@@ -10,7 +10,7 @@ set shiftwidth=4
 " UI
 colorscheme Benokai " use the best colorscheme eva.
 set number " show the line numbers. who would not have this.
-set showcmd " show last command
+" set showcmd " show last command
 set cursorline " highlight current line
 filetype plugin indent on " turn on plugin
 set wildmenu " handy little graphical menu for commands
