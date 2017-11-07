@@ -47,21 +47,9 @@
 [submodule ".vim/bundle/gundo.vim"]
 	path = .vim/bundle/gundo.vim
 	url = http://github.com/sjl/gundo.vim.git
-[submodule ".vim/bundle/syntastic.vim"]
-	path = .vim/bundle/syntastic.vim
-	url = https://github.com/scrooloose/syntastic
 [submodule ".vim/bundle/javascript-libraries.vim"]
 	path = .vim/bundle/javascript-libraries.vim
 	url = https://github.com/othree/javascript-libraries-syntax.vim.git
-[submodule ".vim/bundle/typescript-vim"]
-	path = .vim/bundle/typescript-vim
-	url = https://github.com/leafgarland/typescript-vim.git
-[submodule "vim/bundle/ctrp.vim"]
-	path = vim/bundle/ctrp.vim
-	url = git@github.com:ctrlpvim/ctrlp.vim.git
-[submodule "vim/bundle/vim-tmux-navigator"]
-	path = vim/bundle/vim-tmux-navigator
-	url = git@github.com:christoomey/vim-tmux-navigator.git
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
