@@ -65,3 +65,6 @@
 [submodule ".vim/bundle/vim-markdown"]
 	path = .vim/bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule ".vim/bundle/vim-glsl"]
+	path = .vim/bundle/vim-glsl
+	url = https://github.com/tikhomirov/vim-glsl.git
