@@ -66,3 +66,4 @@ URxvt.lineSpace:            0
 URxvt.letterSpace:          -1
 URxvt*scrollBar:            false
 URxvt.font:                 xft:DejavuSansMono:size=9
+URxvt.internalBorder:       0

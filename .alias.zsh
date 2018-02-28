@@ -83,6 +83,9 @@ alias vps='sschmidt'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
+# Unzip tar files (why the fuck does this have to be an alias)
+alias untar='tar -xvzf'
+
 # (Sorry, this is private :D)
 source ~/ascii/alias.zsh
 
