@@ -86,16 +86,13 @@ alias pbpaste='xclip -selection clipboard -o'
 # Unzip tar files (why the fuck does this have to be an alias)
 alias untar='tar -xvzf'
 
-# (Sorry, this is private :D)
-source ~/ascii/alias.zsh
-
 # Configure monitors
 export XRESOURCES_DEFAULT=~/.Xresources
 export XRESOURCES_WORK=~/.Xresources.work
 alias xwork="xrdb -merge $XRESOURCES_WORK && ~/.screen_layouts/work.sh"
 alias xdefault="xrdb -merge $XRESOURCES_DEFAULT && ~/.screen_layouts/default.sh"
 
-if [ -f /ascii/alias.zsh ]; then
+if [ -f ~/ascii/alias.zsh ]; then
     # (Sorry, this is private :D)
     source ~/ascii/alias.zsh
     alias streams="cd ~/ascii/streams"
