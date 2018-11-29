@@ -47,9 +47,6 @@
 [submodule ".vim/bundle/gundo.vim"]
 	path = .vim/bundle/gundo.vim
 	url = http://github.com/sjl/gundo.vim.git
-[submodule ".vim/bundle/javascript-libraries.vim"]
-	path = .vim/bundle/javascript-libraries.vim
-	url = https://github.com/othree/javascript-libraries-syntax.vim.git
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
@@ -68,3 +65,6 @@
 [submodule ".vim/bundle/vim-glsl"]
 	path = .vim/bundle/vim-glsl
 	url = https://github.com/tikhomirov/vim-glsl.git
+[submodule ".vim/bundle/vim-vue"]
+	path = .vim/bundle/vim-vue
+	url = https://github.com/posva/vim-vue.git
