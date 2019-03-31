@@ -1,4 +1,4 @@
-execute pathogen#infect()
+call pathogen#infect()
 syntax on
 
 " SPACES & TABS
@@ -16,6 +16,10 @@ filetype plugin indent on " turn on plugin
 set wildmenu " handy little graphical menu for commands
 set lazyredraw " save me a few cpu cycles
 set showmatch " helps ADD
+
+if has('gui_running')
+    set guioptions=r
+endif
 
 " SEARCH
 set incsearch " search as characters are entered
