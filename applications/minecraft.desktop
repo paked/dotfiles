@@ -1,5 +1,0 @@
-[Desktop Entry]
-Name=Minecraft
-Exec=java -jar ~/.local/bin/Minecraft.jar
-Terminal=false
-Type=Application
