@@ -1,39 +1,7 @@
 # paked's dotfiles!
 
-```
-git clone --recursive git@github.com:paked/dotfiles
-```
+I decided to nuke all my dotfiles and start again. Here's what I ended up with. I've tried to keep it pretty light.
 
-These are my dotfiles for i3, tmux and vim.
+Install by symlinking everything into the correct places.
 
-Previously I used a python script in order to install them, now I recommend that the person on the other end of this (probably me) manually links them.
-
-```
-ln -s $(pwd)/.vim ~/.vim
-ln -s $(pwd)/.vimrc ~/.vimrc
-ln -s $(pwd)/.tmux.conf ~/.tmux.conf
-ln -s $(pwd)/.alias.zsh ~/.alias.zsh
-ln -s $(pwd)/.blocks ~/.blocks
-ln -s $(pwd)/.config/* ~/.config/
-```
-
-My main device is currently a Razer Blade Stealth. My specific Xorg configuration is in the [razer_blade_stealth](razer_blade_stealth) folder.
-
-To set that up use:
-
-```
-sudo mkdir -p /etc/X11/xorg.conf.d && sudo ln -s $(pwd)/razer_blade_stealth/* /etc/X11/xorg.conf.d/
-```
-
-Make sure to source `.alias.zsh` in `.zshrc`
-
-## Other things to do
-
-- **Create an alias!**: `ae`
-
-## Other things that need to be installed:
-
-- [My fork of Prezto (Like oh-my-zsh but not bloated)](https://github.com/paked/prezto)
-- Terminator (a terminal for i3)
-- dmenu improved (a better dmenu for i3)
-- A FontAwesome ttf (icons for i3status
+Directories should be put in `XDG_CONFIG_HOME` (usually .config).
