@@ -6,29 +6,37 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-sleuth'
 Plug 'preservim/nerdtree'
 
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+Plug 'godlygeek/tabular'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 "
 " General config
 let mapleader = ';'
+set noswapfile
 
-" Netrw stuff
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
-nnoremap <Leader>a :Lexplore<CR>
+" Config editing
+nnoremap <Leader>e :e ~/.config/nvim/init.vim<CR>
+nnoremap <Leader>s :source %<CR>
 
 " Pane splitting
 nnoremap <Leader>h :sp<CR>
 nnoremap <Leader>j :vs<CR>
 
+" Handle long lines nicely properly
+nnoremap j gj
+nnoremap k gk
+
 " Navigation-remapping
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+" nnoremap <c-j> <c-w>j
+" nnoremap <c-k> <c-w>k
+" nnoremap <c-h> <c-w>h
+" nnoremap <c-l> <c-w>l
 
 "
 " NeoSolarized config
@@ -39,4 +47,15 @@ set number
 
 "
 " NERDTree
+nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <Leader>a :NERDTreeToggle<CR>
+
+au FileType md set colorcolum=80
+
+"
+" Search stuff
+
+" search for a file
+nnoremap <Leader>q :GFiles<CR>
+" search contents of file
+nnoremap <Leader>w :Rg<CR>
