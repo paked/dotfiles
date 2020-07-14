@@ -43,11 +43,13 @@ nnoremap k gk
 set termguicolors
 colorscheme NeoSolarized
 set background=dark
-set number
+
+" Relative line numbers
+set number relativenumber
+set nu rnu
 
 "
 " NERDTree
-nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <Leader>a :NERDTreeToggle<CR>
 
 au FileType md set colorcolum=80
@@ -59,3 +61,12 @@ au FileType md set colorcolum=80
 nnoremap <Leader>q :GFiles<CR>
 " search contents of file
 nnoremap <Leader>w :Rg<CR>
+
+"
+" Spelling stuff
+set spelllang=en_au
+autocmd FileType markdown setlocal spell
+autocmd FileType gitcommit setlocal spell
+
+autocmd FileType markdown setlocal complete+=kspell
+autocmd FileType gitcommit setlocal complete+=kspell
