@@ -17,6 +17,7 @@ call plug#end()
 
 "
 " General config
+syntax on
 let mapleader = ';'
 set noswapfile
 
@@ -38,11 +39,14 @@ nnoremap k gk
 " nnoremap <c-h> <c-w>h
 " nnoremap <c-l> <c-w>l
 
-"
 " NeoSolarized config
 set termguicolors
 colorscheme NeoSolarized
 set background=dark
+
+" Make extra whitespace obvious
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 " Relative line numbers
 set number relativenumber
@@ -57,8 +61,11 @@ au FileType md set colorcolum=80
 "
 " Search stuff
 
+nnoremap <esc> :noh<return><esc>
+
 " search for a file
 nnoremap <Leader>q :GFiles<CR>
+nnoremap <Leader>e :Files<CR>
 " search contents of file
 nnoremap <Leader>w :Rg<CR>
 
