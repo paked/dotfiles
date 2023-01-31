@@ -2,8 +2,6 @@
 alias c='clear'
 alias la='ls -a'
 alias pn='ping -c 10 google.com'
-alias hs='python3 -m http.server 8080'
-alias vim='nvim'
 
 # dotfiles related
 alias are='source ~/.bash_aliases'
@@ -49,10 +47,6 @@ function tns {
     tmux new-session -s $session_name
 }
 
-# ruby
+# apps
 alias be='bundle exec'
-
-# bash config
-export GOPATH=~/dev/go
-
-export PATH="$HOME/gems/bin:$PATH"
+alias hs='python3 -m http.server 8080'
