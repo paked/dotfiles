@@ -6,6 +6,29 @@ require('packer').startup(function(use)
 	-- Package manager
 	use 'wbthomason/packer.nvim'
 
+	use {
+		'VonHeikemen/lsp-zero.nvim',
+		branch = 'v1.x',
+		requires = {
+			-- LSP Support
+			{'neovim/nvim-lspconfig'},             -- Required
+			{'williamboman/mason.nvim'},           -- Optional
+			{'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+			-- Autocompletion
+			{'hrsh7th/nvim-cmp'},         -- Required
+			{'hrsh7th/cmp-nvim-lsp'},     -- Required
+			--{'hrsh7th/cmp-buffer'},       -- Optional
+			{'hrsh7th/cmp-path'},         -- Optional
+			{'saadparwaiz1/cmp_luasnip'}, -- Optional
+			{'hrsh7th/cmp-nvim-lua'},     -- Optional
+
+			-- Snippets
+			{'L3MON4D3/LuaSnip'},             -- Required
+			{'rafamadriz/friendly-snippets'}, -- Optional
+		}
+	}
+
 	use 'alexghergh/nvim-tmux-navigation'
 
 	use {
@@ -135,3 +158,13 @@ vim.keymap.set('n', "<C-k>", nvim_tmux_nav.NvimTmuxNavigateUp)
 vim.keymap.set('n', "<C-l>", nvim_tmux_nav.NvimTmuxNavigateRight)
 vim.keymap.set('n', "<C-\\>", nvim_tmux_nav.NvimTmuxNavigateLastActive)
 vim.keymap.set('n', "<C-Space>", nvim_tmux_nav.NvimTmuxNavigateNext)
+
+-- Learn the keybindings, see :help lsp-zero-keybindings
+-- Learn to configure LSP servers, see :help lsp-zero-api-showcase
+local lsp = require('lsp-zero')
+lsp.preset('recommended')
+
+-- (Optional) Configure lua language server for neovim
+lsp.nvim_workspace()
+
+lsp.setup()
