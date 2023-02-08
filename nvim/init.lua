@@ -40,6 +40,12 @@ require('packer').startup(function(use)
 		}
 	}
 
+	use {
+		'nvim-telescope/telescope.nvim',
+		branch = '0.1.x',
+		requires = { {'nvim-lua/plenary.nvim'} }
+	}
+
 
 	use { -- Highlight, edit, and navigate code
 		'nvim-treesitter/nvim-treesitter',
@@ -89,6 +95,8 @@ vim.o.undofile = true
 -- Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
 vim.o.smartcase = true
+
+vim.wo.cursorline = true
 
 -- Decrease update time
 vim.o.updatetime = 250
@@ -167,4 +175,22 @@ lsp.preset('recommended')
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
 
+lsp.configure('gopls')
+
 lsp.setup()
+
+--- cmd to format go documents on save
+vim.api.nvim_create_autocmd('BufWritePre', {
+	pattern = {'*.go'},
+	desc = "format document",
+	command = "lua vim.lsp.buf.format()"
+})
+
+--
+-- Telescope config
+--
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>q', builtin.git_files, {})
+vim.keymap.set('n', '<leader>w', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>e', builtin.buffers, {})
