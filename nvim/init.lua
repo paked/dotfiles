@@ -11,21 +11,20 @@ require('packer').startup(function(use)
 		branch = 'v1.x',
 		requires = {
 			-- LSP Support
-			{'neovim/nvim-lspconfig'},             -- Required
-			{'williamboman/mason.nvim'},           -- Optional
-			{'williamboman/mason-lspconfig.nvim'}, -- Optional
+			{'neovim/nvim-lspconfig'},
+			{'williamboman/mason.nvim'},
+			{'williamboman/mason-lspconfig.nvim'},
 
 			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},         -- Required
-			{'hrsh7th/cmp-nvim-lsp'},     -- Required
-			--{'hrsh7th/cmp-buffer'},       -- Optional
-			{'hrsh7th/cmp-path'},         -- Optional
-			{'saadparwaiz1/cmp_luasnip'}, -- Optional
-			{'hrsh7th/cmp-nvim-lua'},     -- Optional
+			{'hrsh7th/nvim-cmp'},
+			{'hrsh7th/cmp-nvim-lsp'},
+			{'hrsh7th/cmp-path'},
+			{'saadparwaiz1/cmp_luasnip'},
+			{'hrsh7th/cmp-nvim-lua'},
 
 			-- Snippets
-			{'L3MON4D3/LuaSnip'},             -- Required
-			{'rafamadriz/friendly-snippets'}, -- Optional
+			{'L3MON4D3/LuaSnip'},
+			{'rafamadriz/friendly-snippets'},
 		}
 	}
 
@@ -34,8 +33,9 @@ require('packer').startup(function(use)
 	use {
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v2.x",
-		requires = { 
+		requires = {
 			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
 			"MunifTanjim/nui.nvim",
 		}
 	}
@@ -52,6 +52,10 @@ require('packer').startup(function(use)
 		run = function()
 			pcall(require('nvim-treesitter.install').update { with_sync = true })
 		end
+	}
+
+	use {
+		'lewis6991/gitsigns.nvim',
 	}
 
 	use "lukas-reineke/indent-blankline.nvim"
@@ -194,3 +198,6 @@ local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>q', builtin.git_files, {})
 vim.keymap.set('n', '<leader>w', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>e', builtin.buffers, {})
+
+--- gitsigns config
+require('gitsigns').setup()
